@@ -1,5 +1,7 @@
 {
     "values": [
-    "loop:gameloop"
+    "loop:maintenance",
+    "loop:newplayer",
+    "loop:joinmsg"
     ]
    }

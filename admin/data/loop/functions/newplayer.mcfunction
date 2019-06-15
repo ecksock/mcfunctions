@@ -1,3 +1,9 @@
-execute as @a[team=] run tellraw @a ["",{"text":"Nano >> ","color":"dark_aqua"},{"selector":"@s","color":"dark_gray","bold":true},{"text":" joined for the first time!","color":"dark_gray","bold":false}]
+## Join Message - New player joins.
 
-execute as @a[team=] run team join player @s
+## Message to players
+## Template: execute as @a[tag=!new] run <COMMAND>
+execute as @a[tag=!new] run tellraw @a ["",{"selector":"@s","color":"dark_aqua","bold":true},{"text":" joined for the first time!","color":"aqua","bold":false}]
+
+##Add tag so we do not spam chat and we know they are no longer a new player.
+execute as @a[tag=!new] run tag @s add new
+
